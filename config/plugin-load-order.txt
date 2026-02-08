@@ -1,0 +1,38 @@
+# RustEarth staging - ordre de carrega recomanat
+# Format: [fase] plugin
+
+[00-framework]
+carbon.core
+oxide.compat
+json.serializer
+permission.manager
+
+[10-social-identity]
+teams.core
+clans.core
+country.selector
+
+[20-world-logic]
+zones.core
+entity.limits
+cleanup.decay
+
+[30-rustearth-core]
+rustearth.territory
+rustearth.decaybridge
+rustearth.audit
+
+[40-ui-observability]
+leaderboard.core
+discord.bridge
+rcon.alerts
+metrics.exporter
+
+[90-admin]
+admin.tools
+rollback.tools
+
+# Notes:
+# - rustearth.territory ha de carregar despres de teams/clans/country.selector.
+# - cleanup.decay no ha de tenir prioritat superior a rustearth.territory en hooks de propietat.
+# - leaderboard.core consumeix events d'auditoria, no ownership directe.
