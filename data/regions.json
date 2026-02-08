@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "map": {
+    "map_id": "rustearth-world-stylized",
+    "map_size": 4500,
+    "seed": 20260208,
+    "map_version": "0.1.0"
+  },
+  "regions": [
+    {
+      "id": "NA_01",
+      "name": "Northland West",
+      "continent": "NA",
+      "biome_profile": "temperate_forest",
+      "resource_profile": {
+        "tier_a": 0.9,
+        "tier_b": 1.1,
+        "tier_c": 1.0
+      },
+      "adjacent_regions": ["NA_02", "NA_03"],
+      "capture_points": [
+        {
+          "id": "NA_01_CAP",
+          "type": "capital",
+          "weight": 0.5,
+          "world_pos": [1100, 0, 2800]
+        },
+        {
+          "id": "NA_01_IND",
+          "type": "industry",
+          "weight": 0.3,
+          "world_pos": [1250, 0, 2650]
+        },
+        {
+          "id": "NA_01_LOG",
+          "type": "logistics",
+          "weight": 0.2,
+          "world_pos": [980, 0, 2500]
+        }
+      ],
+      "control_rules": {
+        "capture_duration_sec": 900,
+        "requires_capital_plus_one": true,
+        "adjacency_required": true
+      },
+      "versioning": {
+        "created_in": "0.1.0",
+        "deprecated_in": null
+      }
+    },
+    {
+      "id": "EU_01",
+      "name": "Euro Core",
+      "continent": "EU",
+      "biome_profile": "mixed",
+      "resource_profile": {
+        "tier_a": 1.0,
+        "tier_b": 1.0,
+        "tier_c": 1.1
+      },
+      "adjacent_regions": ["EU_02", "EU_03", "AF_01"],
+      "capture_points": [
+        {
+          "id": "EU_01_CAP",
+          "type": "capital",
+          "weight": 0.5,
+          "world_pos": [2450, 0, 2800]
+        },
+        {
+          "id": "EU_01_IND",
+          "type": "industry",
+          "weight": 0.3,
+          "world_pos": [2550, 0, 2650]
+        },
+        {
+          "id": "EU_01_LOG",
+          "type": "logistics",
+          "weight": 0.2,
+          "world_pos": [2350, 0, 2500]
+        }
+      ],
+      "control_rules": {
+        "capture_duration_sec": 900,
+        "requires_capital_plus_one": true,
+        "adjacency_required": true
+      },
+      "versioning": {
+        "created_in": "0.1.0",
+        "deprecated_in": null
+      }
+    },
+    {
+      "id": "AS_01",
+      "name": "Asia North",
+      "continent": "AS",
+      "biome_profile": "steppe",
+      "resource_profile": {
+        "tier_a": 1.2,
+        "tier_b": 0.9,
+        "tier_c": 0.9
+      },
+      "adjacent_regions": ["AS_02", "AS_03", "EU_04"],
+      "capture_points": [
+        {
+          "id": "AS_01_CAP",
+          "type": "capital",
+          "weight": 0.5,
+          "world_pos": [3250, 0, 2850]
+        },
+        {
+          "id": "AS_01_IND",
+          "type": "industry",
+          "weight": 0.3,
+          "world_pos": [3400, 0, 2700]
+        },
+        {
+          "id": "AS_01_LOG",
+          "type": "logistics",
+          "weight": 0.2,
+          "world_pos": [3150, 0, 2520]
+        }
+      ],
+      "control_rules": {
+        "capture_duration_sec": 900,
+        "requires_capital_plus_one": true,
+        "adjacency_required": true
+      },
+      "versioning": {
+        "created_in": "0.1.0",
+        "deprecated_in": null
+      }
+    },
+    {
+      "id": "OC_01",
+      "name": "Oceania Main",
+      "continent": "OC",
+      "biome_profile": "coastal",
+      "resource_profile": {
+        "tier_a": 0.8,
+        "tier_b": 1.0,
+        "tier_c": 1.2
+      },
+      "adjacent_regions": ["OC_02", "AS_04"],
+      "capture_points": [
+        {
+          "id": "OC_01_CAP",
+          "type": "capital",
+          "weight": 0.5,
+          "world_pos": [3950, 0, 1200]
+        },
+        {
+          "id": "OC_01_IND",
+          "type": "industry",
+          "weight": 0.3,
+          "world_pos": [4080, 0, 1100]
+        },
+        {
+          "id": "OC_01_LOG",
+          "type": "logistics",
+          "weight": 0.2,
+          "world_pos": [3850, 0, 980]
+        }
+      ],
+      "control_rules": {
+        "capture_duration_sec": 900,
+        "requires_capital_plus_one": true,
+        "adjacency_required": true
+      },
+      "versioning": {
+        "created_in": "0.1.0",
+        "deprecated_in": null
+      }
+    }
+  ],
+  "sea_routes": [
+    {
+      "id": "SEA_NA_EU_01",
+      "from_region": "NA_01",
+      "to_region": "EU_01",
+      "type": "atlantic_lane",
+      "enabled": true
+    },
+    {
+      "id": "SEA_EU_AS_01",
+      "from_region": "EU_01",
+      "to_region": "AS_01",
+      "type": "eurasia_lane",
+      "enabled": true
+    },
+    {
+      "id": "SEA_AS_OC_01",
+      "from_region": "AS_01",
+      "to_region": "OC_01",
+      "type": "pacific_lane",
+      "enabled": true
+    }
+  ],
+  "id_migrations": []
+}
