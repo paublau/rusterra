@@ -1,0 +1,15 @@
+target/
+**/.DS_Store
+**/Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+logs/
+backups/
+oxide/logs/
+*.db
+*.sav
+*.map
